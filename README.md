@@ -2,7 +2,7 @@
 
 # Hello rails
 
-> Small app to test how react-rails gem works..
+> Small app to test how react-rails gem works.
 
 ## Built With
 
