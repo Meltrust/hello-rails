@@ -34,8 +34,8 @@ run `bundle install`
 run `npm install or yarn install`
 ```
 
-*We can now run rails server -p 3000 and visit http://localhost/hello to see React-Router working (remember ./bin/webpack-dev-server enables auto-webpacking).
-
+You can now run rails server -p 3000 and visit http://localhost/hello to see React-Router working (remember ./bin/webpack-dev-server enables auto-webpacking).
+Also, you can visit now http://localhost/v1/greetings in order to see random greetings from the internal API. 
 
 
 ## Author
