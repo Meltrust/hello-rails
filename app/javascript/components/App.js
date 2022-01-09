@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
@@ -14,12 +13,11 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={("Home!")} />
-            <Route path="/hello" element={<HelloWorld greeting="Friend"/>} />
+            <Route path="/hello" element={<HelloWorld greeting_from_app="Friend" />} />
           </Routes>
         </BrowserRouter>
       </Provider>
     );
 }
 
-export default App;
-
+export default App

@@ -3,19 +3,13 @@ import { createStore, applyMiddleware } from "redux"
 import thunk from 'redux-thunk'
 
 const initialState = {
-  greetings: [
-    {
-      name: "test",
-      guid: "123"
-    }
-  ]
+  greeting: []
 };
 
 function rootReducer(state, action) {
-  console.log(action.type);
   switch (action.type) {
     case "GET_GREETINGS_SUCCESS":
-      return { greetings: action.json.greetings };
+      return { greeting: action.json.greeting };
   }
   return state;
 }

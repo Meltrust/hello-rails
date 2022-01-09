@@ -1,5 +1,4 @@
 import React from "react"
-// import PropTypes from "prop-types"
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
@@ -7,13 +6,12 @@ const GET_GREETINGS_REQUEST = 'GET_GREETINGS_REQUEST';
 const GET_GREETINGS_SUCCESS = 'GET_GREETINGS_SUCCESS';
 
 function getGreetings() {
-  console.log('getGreetings() Action!!')
   return dispatch => {
     dispatch({ type: GET_GREETINGS_REQUEST });
     return fetch(`v1/greetings.json`)
-    .then(response => response.json())
-    .then(json => dispatch(getGreetingsSuccess(json)))
-    .catch(error => console.log(error));
+      .then(response => response.json())
+      .then(json => dispatch(getGreetingsSuccess(json)))
+      .catch(error => console.log(error));
   };
 };
 
@@ -24,27 +22,27 @@ export function getGreetingsSuccess(json) {
   };
 };
 
-class HelloWorld extends React.Component {
-  render () {
-    const { greetings } = this.props;
-    const greetingsList = greetings.map((greeting) => {
-      return <li>{greeting.name} {greeting.guid}</li>
-    })
-  
-    return (
-      <React.Fragment>
-        Greeting: {this.props.greeting}
+function HelloWorld(props) {
+  const { greeting } = props;
+  const greetingsList = greeting
 
-        <button className="getGreetingsBtn" onClick={() => this.props.getGreetings()}>getGreetings</button>
+  return (
+    <React.Fragment>
+      <div className="getGreetings">
+        Greetings: { props.greeting_from_app}
+
+        <button className="getGreetingsBtn" onClick={() => props.getGreetings()}>getGreetings</button>
         <br />
-        <ul>{ greetingsList }</ul>
-      </React.Fragment>
-    );
-  }
+        <br />
+
+        <p>{ greetingsList }</p>
+      </div>
+    </React.Fragment>
+  );
 }
 
 const structuredSelector = createStructuredSelector({
-  greetings: state => state.greetings,
+  greeting: state => state.greeting,
 });
 
 const mapDispatchToProps = { getGreetings };
