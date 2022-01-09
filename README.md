@@ -1,24 +1,65 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Hello rails
 
-Things you may want to cover:
+> Small app to test how react-rails gem works..
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby
+- Rails
+- HTML & CSS
+- React & Redux
 
-* Configuration
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy up and running follow these simple example steps.
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+Have installed Ruby and Rails in your machine
 
-* Deployment instructions
+### Setup
 
-* ...
+clone this repo with:
+``` ruby 
+git clone https://github.com/Meltrust/hello-rails.git
+```
+
+### Install
+
+``` ruby
+run `bundle install`
+run `npm install or yarn install`
+```
+
+*We can now run rails server -p 3000 and visit http://localhost/hello to see React-Router working (remember ./bin/webpack-dev-server enables auto-webpacking).
+
+
+
+## Author
+
+👤 **Miguel Tapia**
+
+- Github: [@meltrust](https://github.com/meltrust)
+- Linkedin: [linkedin](https://www.linkedin.com/in/meltrust/)
+- Or talk to me directly at: original.mtapia@outlook.com
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/eri8-9/hello_rails/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/)
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
